@@ -1,1 +1,1 @@
-# visualiza-o-de-dados
+# Laboratórios da disciplina de Visualização de dados
