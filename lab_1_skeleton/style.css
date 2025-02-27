@@ -1,6 +1,78 @@
+:root {
+	--grey: oklch(80% 3% 200);
+	--white: #ffffff;
+	--purple: rgb(179, 65, 150);
+  }
+  body { background-color: oklch(from var(--grey) 95% 5% h); } /*a lighter grey*/
+  .container {  background-color: var(--white);}
+
+
 body {
 	/* Set line height to 1.5 times the font size
 	   and use the OS’s UI font as the website font
 	 */
 	font: 100%/1.5 system-ui;
+	max-width: 100ch;
+	margin-inline: auto;
+	padding: 1cm;
+	/* margin-inline: max(1em, (100% - 100ch) / 2); */
+
 }
+
+nav {
+    display: flex; /*Manipular de forma horizontal*/
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: oklch(80% 3% 200);
+}
+
+
+nav a {
+    flex:1; /*Todos os elementos ocupem o mesmo espaço*/
+	text-decoration: none;
+    color: inherit;
+    text-align: center;
+    padding: 0.5em;
+	
+}
+
+a:hover{
+
+	border-bottom-width: 0.4cm;
+	border-bottom-style: solid;
+	border-bottom-color: var(--purple);
+	padding-bottom: -0.1em;
+	background-color: rgba(179, 65, 150, 0.28);
+    padding: -0.1em;
+	
+}
+/* 
+input, textarea, button{
+	font: inherit;
+}
+
+label, input, textarea, button {
+    display: block;
+}
+input, textarea, button {
+    width: 100%;
+    box-sizing: border-box;
+}
+label { margin-block: 1rem;}
+
+ */
+ form{
+	display:grid;
+	grid-template-columns: auto 1fr;
+	gap: 1em;
+ }
+
+ form label{
+	display: grid;
+	grid-template-columns: subgrid;
+ }
+
+ label, button{
+	grid-column: 1 / -1;
+
+ }

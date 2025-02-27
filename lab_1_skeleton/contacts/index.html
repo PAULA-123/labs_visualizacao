@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> <!-- Write title here --> </title>
+
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
 
     <!-- Navigation menu: -->
         <nav>
             <!-- Navigation link to the home page -->
-            <a href="../index.html">Home</a>
+            <a href="../index.html" class="current">Home</a>
                 <!--    
                     href="../index.html" refers to the file that this link will open
                     The "../" moves up one directory (out of the current folder) before looking for index.html
@@ -26,16 +28,10 @@
         </nav>
     
         <form action="mailto:foo@example.com" method="get">
-            <label for="email">Email:</label><br>
-            <input name="email" type="email"><br>
-
-            <label for="subject">Subjct:</label><br>
-            <input name="subject" type="text"><br>
-
-            <label for="body">Body:</label><br>
-            <textarea nome="body"> </textarea><br>
+            <label for="email">Email: <input id="email" type="email" name="text_email"> </label>
+            <label for="subject">Subject: <input id="subject" type="text" name="text_subject"> </label>
+            <label for="body">Body: <textarea id="body" name="text_message"></textarea> </label>
             <button>Submit</button>
-
         </form>
 </body>
 </html>
